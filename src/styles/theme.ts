@@ -14,6 +14,7 @@ export const theme = extendTheme({
       '100': '#D1D2DC',
       '50': '#EEEEF2',
     },
+    primaryBlue: '#5BA8F5',
   },
   fonts: {
     heading: 'Roboto',
