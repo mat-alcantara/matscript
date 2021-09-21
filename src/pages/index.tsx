@@ -1,8 +1,8 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, Heading, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import React from 'react';
+
 import { Header } from './components/Header';
 
 const Home: NextPage = () => {
@@ -11,8 +11,12 @@ const Home: NextPage = () => {
       <Head>
         <title>Mateus Alcantara</title>
       </Head>
-      <Flex>
-        <Header />
+      <Header />
+      <Flex pt="100px" minHeight="5000px" position="relative">
+        <Flex direction="column" mt={64} align="center" w="100%">
+          <Text>Oi, meu nome é</Text>
+          <Heading color="primaryBlue">Mateus Alcantara</Heading>
+        </Flex>
       </Flex>
     </>
   );
