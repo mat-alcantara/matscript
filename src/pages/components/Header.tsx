@@ -14,24 +14,24 @@ export const Header: NextPage = () => {
       top={0}
       zIndex="3"
       boxShadow="var(--chakra-shadows-sm)"
-      bg="var(--chakra-colors-white)"
+      bg="#0D1117"
     >
       <Image src="./logo.svg" width="42px" height="42px" />
       <HStack spacing={8} fontFamily="Roboto Mono" fontSize="13px">
         <HStack as="a" href="#">
-          <Text color="blue.600">01.</Text>
+          <Text color="primaryBlue">01.</Text>
           <Text>Sobre</Text>
         </HStack>
         <HStack as="a" href="#">
-          <Text color="blue.600">02.</Text>
+          <Text color="primaryBlue">02.</Text>
           <Text>Experiencia</Text>
         </HStack>
         <HStack as="a" href="#">
-          <Text color="blue.600">03.</Text>
+          <Text color="primaryBlue">03.</Text>
           <Text>Projetos</Text>
         </HStack>
         <HStack as="a" href="#">
-          <Text color="blue.600">04.</Text>
+          <Text color="primaryBlue">04.</Text>
           <Text>Contato</Text>
         </HStack>
         <Button variant="solid" colorScheme="blue">
