@@ -57,9 +57,11 @@ export const SocialMedia: React.FC = () => {
       </Flex>
       <Flex direction="column" align="center">
         <Text
+          as="a"
           fontSize="20px"
           letterSpacing="0.1em"
           sx={{ writingMode: 'tb-rl' }}
+          href="mailto: mateuscastro.al@gmail.com"
         >
           mateuscastro.al@gmail.com
         </Text>
