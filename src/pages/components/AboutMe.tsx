@@ -37,8 +37,8 @@ export const AboutMe: React.FC = () => {
             culpa qui officia deserunt mollit anim id est laborum.
           </Text>
         </Flex>
-        <Flex ml={8} align="center">
-          <Image src="./profile2.jpg" />
+        <Flex ml={16} align="center">
+          <Image src="./profile2.jpg" borderRadius="50%" />
         </Flex>
       </Flex>
     </Flex>
