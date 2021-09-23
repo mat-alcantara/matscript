@@ -10,7 +10,7 @@ export const Header: NextPage = () => {
       align="center"
       justify="space-between"
       w="100%"
-      position="sticky"
+      position="fixed"
       top={0}
       zIndex="3"
       boxShadow="var(--chakra-shadows-sm)"
