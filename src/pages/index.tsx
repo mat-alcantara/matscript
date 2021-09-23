@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -18,8 +18,12 @@ const Home: NextPage = () => {
       <SocialMedia />
 
       <Flex direction="column" w="100%" maxW="900px" mx="auto" as="main">
-        <Hero />
-        <AboutMe />
+        <Box h="100%" minH="100vh">
+          <Hero />
+        </Box>
+        <Box h="100%" minH="100vh">
+          <AboutMe />
+        </Box>
       </Flex>
     </>
   );
