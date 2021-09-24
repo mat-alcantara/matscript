@@ -1,12 +1,4 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Divider, Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 
 export const AboutMe: React.FC = () => {
@@ -25,15 +17,15 @@ export const AboutMe: React.FC = () => {
       </Flex>
       <Flex mt={16} align="flex-start">
         <VStack>
-          <Text float="left" textAlign="justify">
+          <Text float="left" textAlign="justify" w="900px">
             <Image
               float="right"
-              w="400px"
+              w="450px"
               src="./profile2.jpg"
               height="auto"
               borderRadius="4px"
               ml={8}
-              mb={8}
+              mb={4}
             />
             Meu nome é Mateus Alcantara, eu tenho 24 anos e eu sou
             Desenvolvedor. A minha paixão por programação começou em 2016,
