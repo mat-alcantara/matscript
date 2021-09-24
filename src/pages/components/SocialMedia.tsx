@@ -27,28 +27,28 @@ export const SocialMedia: React.FC = () => {
             mt={4}
             colorScheme="transparent"
             aria-label="Github"
-            icon={<FaGithub fontSize="20px" />}
+            icon={<FaGithub fontSize="25px" />}
             onClick={() => push('https://github.com/mat-alcantara')}
           />
           <IconButton
             mt={4}
             colorScheme="transparent"
             aria-label="Linkedin"
-            icon={<FaLinkedin fontSize="20px" />}
+            icon={<FaLinkedin fontSize="25px" />}
             onClick={() => push('https://www.linkedin.com/in/mat-alcantara/')}
           />
           <IconButton
             mt={4}
             colorScheme="transparent"
             aria-label="Hacker Rank"
-            icon={<SiHackerrank fontSize="20px" />}
+            icon={<SiHackerrank fontSize="25px" />}
             onClick={() => push('https://www.hackerrank.com/mateuscastro_al')}
           />
           <IconButton
             mt={4}
             colorScheme="transparent"
             aria-label="Instagram"
-            icon={<FaInstagram fontSize="20px" />}
+            icon={<FaInstagram fontSize="25px" />}
             onClick={() => push('https://www.instagram.com/mat.alcantara/')}
           />
         </Flex>

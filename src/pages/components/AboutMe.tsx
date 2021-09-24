@@ -1,4 +1,12 @@
-import { Box, Divider, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import React from 'react';
 
 export const AboutMe: React.FC = () => {
@@ -11,34 +19,54 @@ export const AboutMe: React.FC = () => {
           color="#5BA8F5"
           fontFamily="Roboto Mono"
         >
-          02. Sobre mim
+          01. Sobre mim
         </Heading>
         <Divider ml={8} />
       </Flex>
-      <Flex mt={16}>
-        <Flex display="column" justify="flex-start" align="flex-start">
+      <Flex mt={16} align="flex-start">
+        <VStack>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Meu nome é Mateus Alcantara, eu tenho 24 anos e eu sou
+            Desenvolvedor. A minha paixão por programação começou em 2016,
+            quando ainda na faculdade de Engenharia Elétrica eu tive o meu
+            primeiro contato com a linguagem C++. Infelizmente por problemas
+            financeiros eu não pude dar continuidade ao meu curso, porém o amor
+            por programação nunca saiu de mim.
           </Text>
           <Box />
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Após esse período, passei a trabalhar em uma empresa familiar que se
+            encontrava a beira da falềncia. Nesta empresa, fundamos o setor de
+            Marcenaria, onde fiquei responsável tanto pela parte gerencial,
+            quanto pelo trabalho braçal. Em 3 anos nós expandimos o setor ao
+            ponto de se tornar o setor mais lucrativo da empresa.
           </Text>
-        </Flex>
+          <Text>
+            Apesar da rápida expansão, enfrentamos muitos problemas gerenciais,
+            principalmente pela dificuldade na comunicação entre as lojas e a
+            Marcenaria. Foi então que eu decidi que resolveria todos esses
+            problemas com a ajuda da programação. Essa jornada começou a 2 anos
+            atrás, e desde então, não houve um dia sequer em que eu não tenha
+            tido contato com programação. Com a ajuda de conhecimentos
+            adquiridos como autodidata, eu criei o site que hoje gerencia todos
+            os pedidos da Marcenaria, e com o tempo acrescentei ferramentas para
+            facilitar outros setores da empresa.
+          </Text>
+          <Text>
+            Já são mais de 2 anos completamente apaixonado pelo que eu faço,
+            acordando todos os dias às 5AM para poder estudar programação antes
+            do trabalho, utilizando os meus conhecimentos para resolver
+            problemas reais, errando, acertando, aprendendo, e reforçando a
+            minha certeza de que é isso o que eu amo fazer, e que é isso o que
+            eu quero fazer pro resto da minha vida. E com isso em mente,
+            atualmente eu me encontro em busca de novos desafios, com o objetivo
+            de obter aprendizado ao mesmo tempo em que eu possa ajudar a
+            construir projetos que farão do mundo um lugar melhor.
+          </Text>
+          <Text />
+        </VStack>
         <Flex ml={16} align="center">
-          <Image src="./profile2.jpg" borderRadius="50%" />
+          <Image src="./profile2.jpg" height="auto" borderRadius="4px" />
         </Flex>
       </Flex>
     </Flex>

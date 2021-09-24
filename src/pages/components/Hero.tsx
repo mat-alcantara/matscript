@@ -19,8 +19,8 @@ export const Hero: React.FC = () => {
         habilidades para criar produtos que tem o potencial de tornar a vida das
         pessoas mais fáceis. <br />
         <br />
-        Tecnologias: HTML, CSS, Javascript, Typescript, ReactJS, NextJS, NodeJS,
-        SQL, NoSQL
+        Tecnologias: Java, Javascript, SQL, NoSQL, Docker, NodeJS, Typescript,
+        HTML, CSS, ReactJS, NextJS,
       </Text>
       <Flex mt={8} w="100%" minW="450px">
         <Button variant="outline" colorScheme="blue" leftIcon={<FaGithub />}>

@@ -20,7 +20,7 @@ export const Header: NextPage = () => {
       <HStack spacing={8} fontFamily="Roboto Mono" fontSize="13px">
         <HStack as="a" href="#">
           <Text color="#5BA8F5">01.</Text>
-          <Text>Sobre</Text>
+          <Text>Sobre mim</Text>
         </HStack>
         <HStack as="a" href="#">
           <Text color="#5BA8F5">02.</Text>
@@ -30,9 +30,10 @@ export const Header: NextPage = () => {
           <Text color="#5BA8F5">03.</Text>
           <Text>Projetos</Text>
         </HStack>
+
         <HStack as="a" href="#">
           <Text color="#5BA8F5">04.</Text>
-          <Text>Contato</Text>
+          <Text>Blog</Text>
         </HStack>
         <Button variant="solid" colorScheme="blue">
           Currículo
