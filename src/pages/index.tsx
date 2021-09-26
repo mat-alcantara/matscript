@@ -6,6 +6,7 @@ import React from 'react';
 import { AboutMe } from './components/AboutMe';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { Projects } from './components/Projects';
 import { SocialMedia } from './components/SocialMedia';
 
 const Home: NextPage = () => {
@@ -23,6 +24,9 @@ const Home: NextPage = () => {
         </Box>
         <Box h="100%" minH="100vh">
           <AboutMe />
+        </Box>
+        <Box h="100%" minH="100vh">
+          <Projects />
         </Box>
       </Flex>
     </>
