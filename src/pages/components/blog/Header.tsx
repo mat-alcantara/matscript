@@ -11,15 +11,21 @@ export const Header: React.FC = () => {
         </Heading>
       </HStack>
 
-      <HStack spacing={8}>
+      <HStack
+        spacing={8}
+        fontFamily="Roboto Mono"
+        fontSize="18px"
+        color="#0C3048"
+        fontWeight="700"
+      >
         <HStack as="a" href="#">
-          <Text color="#0C3048">Blog</Text>
+          <Text>Blog</Text>
         </HStack>
         <HStack as="a" href="#">
-          <Text color="#0C3048">Livros</Text>
+          <Text>Livros</Text>
         </HStack>
         <HStack as="a" href="#">
-          <Text color="#0C3048">Sobre</Text>
+          <Text>Sobre</Text>
         </HStack>
       </HStack>
     </Flex>
