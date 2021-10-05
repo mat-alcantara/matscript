@@ -1,13 +1,16 @@
-import { Flex, Heading, HStack, Icon, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
 import { FaRegCalendar, FaRegClock } from 'react-icons/fa';
 
 export const PostItem: React.FC = () => {
   return (
     <Flex direction="column">
-      <Heading size="lg">
-        Quando quebrar um componente em múltiplos componentes
-      </Heading>
+      <Box as="a" href="https://google.com/">
+        <Heading size="lg">
+          Quando quebrar um componente em múltiplos componentes
+        </Heading>
+      </Box>
+
       <HStack spacing={8} mt={2}>
         <HStack>
           <Icon as={FaRegCalendar} />

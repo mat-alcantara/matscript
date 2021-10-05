@@ -22,6 +22,9 @@ export const Header: React.FC = () => {
           <Text>Blog</Text>
         </HStack>
         <HStack as="a" href="#">
+          <Text>Algoritmos</Text>
+        </HStack>
+        <HStack as="a" href="#">
           <Text>Livros</Text>
         </HStack>
         <HStack as="a" href="#">

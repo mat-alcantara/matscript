@@ -3,9 +3,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
-import { Header } from './components/blog/Header';
-import { PersonalInfo } from './components/blog/PersonalInfo';
-import { PostMenu } from './components/blog/Post/PostMenu';
+import { Header } from '../components/blog/Header';
+import { PersonalInfo } from '../components/blog/PersonalInfo';
+import { PostMenu } from '../components/blog/Post/PostMenu';
 
 const Home: NextPage = () => {
   return (
