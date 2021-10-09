@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { RichText } from 'prismic-dom';
 import React from 'react';
@@ -33,7 +33,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
       <Flex direction="column" w="100%" maxW="980px" mx="auto">
         <Header />
         <Flex mt={8} justify="space-between">
-          <PostMenu />
+          <PostMenu posts={posts} />
           <PersonalInfo />
         </Flex>
       </Flex>
