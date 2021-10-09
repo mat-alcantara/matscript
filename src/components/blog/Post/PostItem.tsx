@@ -5,7 +5,7 @@ import { FaRegCalendar, FaRegClock } from 'react-icons/fa';
 export const PostItem: React.FC = () => {
   return (
     <Flex direction="column">
-      <Box as="a" href="https://google.com/">
+      <Box as="a" href="/post">
         <Heading size="lg">
           Quando quebrar um componente em múltiplos componentes
         </Heading>

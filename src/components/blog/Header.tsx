@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
       <HStack spacing={2} as="a" href="/">
         <Image src="./logo.svg" width="50px" height="50px" />
         <Heading size="lg" color="#5BA8F5" fontFamily="Roboto Mono">
-          Matscript
+          matscript
         </Heading>
       </HStack>
 

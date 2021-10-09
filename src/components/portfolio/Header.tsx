@@ -22,7 +22,6 @@ export const Header: NextPage = () => {
           <Text color="#5BA8F5">01.</Text>
           <Text>Sobre mim</Text>
         </HStack>
-
         <HStack as="a" href="#">
           <Text color="#5BA8F5">02.</Text>
           <Text>Projetos</Text>

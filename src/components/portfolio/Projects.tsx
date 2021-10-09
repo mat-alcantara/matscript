@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
           color="#5BA8F5"
           fontFamily="Roboto Mono"
         >
-          01. Projetos
+          02c. Projetos
         </Heading>
         <Divider ml={8} />
       </Flex>
