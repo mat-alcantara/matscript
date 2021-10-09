@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import Prismic from '@prismicio/client';
+import { format } from 'date-fns';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { RichText } from 'prismic-dom';
@@ -10,7 +11,20 @@ import { PersonalInfo } from '../components/blog/PersonalInfo';
 import { PostMenu } from '../components/blog/Post/PostMenu';
 import { getPrismicClient } from '../services/prismic';
 
-const Home: NextPage = () => {
+export interface Post {
+  slug: string;
+  createdAt: string;
+  title: string;
+}
+
+interface HomeProps {
+  posts: Post[];
+}
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { ptBR } = require('date-fns/locale');
+
+const Home: React.FC<HomeProps> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -35,10 +49,20 @@ export const getStaticProps: GetStaticProps = async () => {
     { fetch: ['posts.title', 'posts.content'], pageSize: 100 },
   );
 
-  console.log(response);
+  const posts = response.results.map(post => {
+    return {
+      slug: post.uid,
+      title: RichText.asText(post.data.title),
+      createdAt:
+        post.first_publication_date &&
+        format(new Date(post.first_publication_date), 'd MMM', {
+          locale: ptBR,
+        }),
+    };
+  });
 
   return {
-    props: { posts: 'ok' },
+    props: { posts },
   };
 };
 
