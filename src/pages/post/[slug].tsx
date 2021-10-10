@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { GetServerSideProps } from 'next';
@@ -30,8 +30,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
       <Container>
         <Flex direction="column">
           <PostHeader />
-          <Flex
-            direction="column"
+          <Box
             className="postContent"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
