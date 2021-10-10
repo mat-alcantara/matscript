@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
 
-import { Header } from '../components/blog/Header';
+import { Container } from '../components/blog/Container';
 import { AboutMe } from '../components/portfolio/AboutMe';
 
 const About: React.FC = () => {
@@ -11,12 +11,9 @@ const About: React.FC = () => {
       <Head>
         <title>Mateus Alcantara | Sobre mim</title>
       </Head>
-      <Flex direction="column" w="100%" maxW="980px" mx="auto">
-        <Header />
-        <Flex mt={8}>
-          <AboutMe />
-        </Flex>
-      </Flex>
+      <Container>
+        <AboutMe />
+      </Container>
     </>
   );
 };

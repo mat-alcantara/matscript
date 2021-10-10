@@ -8,7 +8,6 @@ import { RichText } from 'prismic-dom';
 import React from 'react';
 
 import { Container } from '../components/blog/Container';
-import { Header } from '../components/blog/Header';
 import { PersonalInfo } from '../components/blog/PersonalInfo';
 import { PostMenu } from '../components/blog/Post/PostMenu';
 import { getPrismicClient } from '../services/prismic';
