@@ -10,6 +10,7 @@ import { Header } from '../components/blog/Header';
 import { PersonalInfo } from '../components/blog/PersonalInfo';
 import { PostMenu } from '../components/blog/Post/PostMenu';
 import { getPrismicClient } from '../services/prismic';
+import { getEstimatedReadingTime } from '../utils/getEstimateReadindTime';
 
 export interface Post {
   slug: string;
@@ -58,6 +59,7 @@ export const getStaticProps: GetStaticProps = async () => {
         format(new Date(post.first_publication_date), 'd MMM', {
           locale: ptBR,
         }),
+      readingTime: getEstimatedReadingTime(RichText.asText(post.data.content)),
     };
   });
 
