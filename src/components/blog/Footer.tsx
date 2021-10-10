@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const Footer: React.FC = () => {
   return (
-    <Flex as="footer" justify="space-between" py={8} align="center">
+    <Flex as="footer" justify="space-between" pb={8} pt={16} align="center">
       <Text>Copyright © Mateus Alcantara</Text>
       <HStack spacing={2}>
         <IconButton
