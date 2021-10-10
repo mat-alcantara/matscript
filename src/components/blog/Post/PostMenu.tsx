@@ -13,8 +13,6 @@ export const PostMenu: React.FC<PostMenuProps> = ({ posts }) => {
     <VStack spacing={12} direction="column" maxW="65%" align="flex-start">
       {posts
         .sort((a, b) => {
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
           if (a.createdAt > b.createdAt) {
             return 1;
           }
