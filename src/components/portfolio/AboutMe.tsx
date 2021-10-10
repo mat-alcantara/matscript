@@ -11,13 +11,13 @@ export const AboutMe: React.FC = () => {
           color="#5BA8F5"
           fontFamily="Roboto Mono"
         >
-          01. Sobre mim
+          Sobre mim
         </Heading>
         <Divider ml={8} />
       </Flex>
       <Flex mt={16} align="flex-start">
         <VStack>
-          <Text float="left" textAlign="justify" w="900px">
+          <Text float="left" textAlign="justify" maxW="980px">
             <Image
               float="right"
               w="450px"
@@ -63,7 +63,6 @@ export const AboutMe: React.FC = () => {
             construir projetos que farão do mundo um lugar melhor.
           </Text>
         </VStack>
-        <Flex ml={16} align="center" />
       </Flex>
     </Flex>
   );
