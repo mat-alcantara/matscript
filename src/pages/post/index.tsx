@@ -19,6 +19,7 @@ import {
   FaRegClock,
 } from 'react-icons/fa';
 
+import { Container } from '../../components/blog/Container';
 import { Header } from '../../components/blog/Header';
 
 const Post: React.FC = () => {
@@ -27,9 +28,8 @@ const Post: React.FC = () => {
       <Head>
         <title>Mateus Alcantara</title>
       </Head>
-      <Flex direction="column" w="100%" maxW="980px" mx="auto">
-        <Header />
-        <Flex mt={8} direction="column">
+      <Container>
+        <Flex direction="column">
           <Flex justify="space-between" w="100%" align="flex-start">
             <HStack spacing={4}>
               <Image
@@ -128,7 +128,7 @@ const Post: React.FC = () => {
             </Text>
           </Flex>
         </Flex>
-      </Flex>
+      </Container>
     </>
   );
 };
