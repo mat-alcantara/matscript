@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
         color="#0C3048"
         fontWeight="700"
       >
-        <HStack as="a" href="#">
+        <HStack as="a" href="/">
           <Text>Blog</Text>
         </HStack>
         <HStack as="a" href="#">
@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
         <HStack as="a" href="#">
           <Text>Livros</Text>
         </HStack>
-        <HStack as="a" href="#">
+        <HStack as="a" href="/sobre">
           <Text>Sobre</Text>
         </HStack>
       </HStack>
