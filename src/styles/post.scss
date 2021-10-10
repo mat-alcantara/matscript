@@ -33,4 +33,19 @@
   img {
     margin-top: 2em;
   }
+
+  pre {
+    font-size: 12px;
+    font-family: 'Roboto mono';
+    margin-top: 2em;
+    color: #fff;
+    background: #0d1117;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    max-width: 680px;
+    white-space: pre-wrap;
+  }
 }
