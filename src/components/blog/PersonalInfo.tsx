@@ -9,7 +9,7 @@ export const PersonalInfo: React.FC = () => {
     <Flex align="center" direction="column" textAlign="center">
       <Image
         src="./profile2.jpg"
-        width="175px"
+        width="200px"
         height="auto"
         borderRadius="50%"
       />
