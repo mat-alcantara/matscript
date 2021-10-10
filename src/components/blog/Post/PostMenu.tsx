@@ -10,7 +10,7 @@ interface PostMenuProps {
 
 export const PostMenu: React.FC<PostMenuProps> = ({ posts }) => {
   return (
-    <VStack spacing={12} direction="column" maxW="75%" align="flex-start">
+    <VStack spacing={12} direction="column" maxW="65%" align="flex-start">
       {posts.map(post => (
         <PostItem key={post.slug} post={post} />
       ))}
