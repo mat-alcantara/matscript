@@ -16,6 +16,7 @@ export interface Post {
   slug: string;
   createdAt: string;
   title: string;
+  estimateReadingTime: number;
 }
 
 interface HomeProps {

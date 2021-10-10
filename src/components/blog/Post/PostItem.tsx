@@ -20,10 +20,10 @@ export const PostItem: React.FC<PostItemProps> = ({ post }) => {
           <Icon as={FaRegCalendar} />
           <Text>{post.createdAt}</Text>
         </HStack>
-        {/* <HStack>
+        <HStack>
           <Icon as={FaRegClock} />
-          <Text>2 minutos de leitura</Text>
-        </HStack> */}
+          <Text>{post.estimateReadingTime} minutos de leitura</Text>
+        </HStack>
       </HStack>
     </Flex>
   );
