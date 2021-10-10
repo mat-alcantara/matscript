@@ -3,23 +3,26 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const Footer: React.FC = () => {
   return (
-    <Flex as="footer" justify="space-between" py={16}>
+    <Flex as="footer" justify="space-between" py={8} align="center">
       <Text>Copyright © Mateus Alcantara</Text>
-      <HStack spacing={4}>
+      <HStack spacing={2}>
         <IconButton
-          colorScheme="blue"
+          size="lg"
           aria-label="Github"
-          icon={<FaGithub />}
+          icon={<FaGithub fontSize="24px" />}
+          variant="ghost"
         />
         <IconButton
-          colorScheme="blue"
+          size="lg"
           aria-label="Linkedin"
-          icon={<FaLinkedin />}
+          icon={<FaLinkedin fontSize="24px" />}
+          variant="ghost"
         />
         <IconButton
-          colorScheme="blue"
+          size="lg"
           aria-label="Instagram"
-          icon={<FaInstagram />}
+          icon={<FaInstagram fontSize="24px" />}
+          variant="ghost"
         />
       </HStack>
     </Flex>

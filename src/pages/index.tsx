@@ -7,6 +7,7 @@ import Head from 'next/head';
 import { RichText } from 'prismic-dom';
 import React from 'react';
 
+import { Container } from '../components/blog/Container';
 import { Header } from '../components/blog/Header';
 import { PersonalInfo } from '../components/blog/PersonalInfo';
 import { PostMenu } from '../components/blog/Post/PostMenu';
@@ -30,13 +31,12 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
       <Head>
         <title>Mateus Alcantara</title>
       </Head>
-      <Flex direction="column" w="100%" maxW="980px" mx="auto">
-        <Header />
-        <Flex mt={8} justify="space-between">
+      <Container>
+        <Flex justify="space-between">
           <PostMenu posts={posts} />
           <PersonalInfo />
         </Flex>
-      </Flex>
+      </Container>
     </>
   );
 };

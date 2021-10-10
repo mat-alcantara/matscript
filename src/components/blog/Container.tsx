@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 
-import { Header } from '../portfolio/Header';
 import { Footer } from './Footer';
+import { Header } from './Header';
 
 export const Container: React.FC = ({ children }) => {
   return (
