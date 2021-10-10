@@ -1,7 +1,7 @@
 import { Flex, Heading, List, ListItem, Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { GetServerSideProps, NextApiRequest } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { RichText } from 'prismic-dom';
 import React from 'react';
@@ -10,13 +10,6 @@ import { Container } from '../../components/blog/Container';
 import { PostHeader } from '../../components/blog/Post/PostHeader';
 import { getPrismicClient } from '../../services/prismic';
 import { getEstimatedReadingTime } from '../../utils/getEstimateReadindTime';
-
-type Params = {
-  req: NextApiRequest;
-  params: {
-    slug: string;
-  };
-};
 
 const Post: React.FC = () => {
   return (
@@ -112,8 +105,6 @@ export const getServerSideProps: GetServerSideProps = async ({
       RichText.asText(response.data.content),
     ),
   };
-
-  console.log(post);
 
   return {
     props: {
