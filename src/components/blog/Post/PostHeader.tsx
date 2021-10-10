@@ -21,11 +21,12 @@ export const PostHeader: React.FC = () => {
     <Flex justify="space-between" w="100%" align="flex-start">
       <HStack spacing={4}>
         <Image
-          src="./profile2.jpg"
+          src="/profile2.jpg"
+          borderRadius="50%"
           width="60px"
           height="60px"
-          borderRadius="50%"
         />
+
         <Flex direction="column">
           <Heading size="md">Mateus Alcantara</Heading>
           <HStack>

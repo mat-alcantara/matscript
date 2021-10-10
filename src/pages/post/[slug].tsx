@@ -1,9 +1,22 @@
 import { Flex, Heading, List, ListItem, Text } from '@chakra-ui/react';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { GetServerSideProps, NextApiRequest } from 'next';
 import Head from 'next/head';
+import { RichText } from 'prismic-dom';
 import React from 'react';
 
 import { Container } from '../../components/blog/Container';
 import { PostHeader } from '../../components/blog/Post/PostHeader';
+import { getPrismicClient } from '../../services/prismic';
+import { getEstimatedReadingTime } from '../../utils/getEstimateReadindTime';
+
+type Params = {
+  req: NextApiRequest;
+  params: {
+    slug: string;
+  };
+};
 
 const Post: React.FC = () => {
   return (
@@ -73,3 +86,38 @@ const Post: React.FC = () => {
 };
 
 export default Post;
+
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  params,
+}) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { slug } = params;
+
+  const prismic = getPrismicClient(req);
+
+  const response = await prismic.getByUID('posts', String(slug), {});
+
+  const post = {
+    slug,
+    title: RichText.asText(response.data.title),
+    content: RichText.asHtml(response.data.content),
+    createdAt:
+      response.first_publication_date &&
+      format(new Date(response.first_publication_date), 'd MMM', {
+        locale: ptBR,
+      }),
+    estimateReadingTime: getEstimatedReadingTime(
+      RichText.asText(response.data.content),
+    ),
+  };
+
+  console.log(post);
+
+  return {
+    props: {
+      post,
+    },
+  };
+};
