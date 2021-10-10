@@ -1,7 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
-import type { GetStaticProps } from 'next';
+import { ptBR } from 'date-fns/locale';
+import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { RichText } from 'prismic-dom';
 import React from 'react';
@@ -23,9 +24,6 @@ interface HomeProps {
   posts: Post[];
 }
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { ptBR } = require('date-fns/locale');
-
 const Home: React.FC<HomeProps> = ({ posts }) => {
   return (
     <>
@@ -43,7 +41,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const prismic = getPrismicClient();
 
   const response = await prismic.query(
@@ -60,7 +58,9 @@ export const getStaticProps: GetStaticProps = async () => {
         format(new Date(post.first_publication_date), 'd MMM', {
           locale: ptBR,
         }),
-      readingTime: getEstimatedReadingTime(RichText.asText(post.data.content)),
+      estimateReadingTime: getEstimatedReadingTime(
+        RichText.asText(post.data.content),
+      ),
     };
   });
 

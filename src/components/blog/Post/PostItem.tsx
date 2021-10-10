@@ -22,7 +22,7 @@ export const PostItem: React.FC<PostItemProps> = ({ post }) => {
         </HStack>
         <HStack>
           <Icon as={FaRegClock} />
-          <Text>{post.estimateReadingTime} minutos de leitura</Text>
+          <Text>{`${post.estimateReadingTime} minutos de leitura`}</Text>
         </HStack>
       </HStack>
     </Flex>
