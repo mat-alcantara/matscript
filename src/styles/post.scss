@@ -1,6 +1,5 @@
 .postContent {
   max-width: 980px;
-  font-size: 21px;
   color: #292929;
 
   p {
@@ -29,6 +28,10 @@
   }
 
   ol {
+    margin-top: 2em;
+  }
+
+  img {
     margin-top: 2em;
   }
 }
