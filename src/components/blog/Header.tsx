@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Header: React.FC = () => {
   return (
-    <Flex justify="space-between" w="100%" align="center" py={8}>
+    <Flex as="header" justify="space-between" w="100%" align="center" py={8}>
       <HStack spacing={2} as="a" href="/">
         <Image src="./logo.svg" width="50px" height="50px" />
         <Heading size="lg" color="#5BA8F5" fontFamily="Roboto Mono">
