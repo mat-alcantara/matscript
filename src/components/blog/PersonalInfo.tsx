@@ -17,7 +17,7 @@ export const PersonalInfo: React.FC = () => {
         Mateus Alcantara
       </Heading>
       <Text mt={4}>Desenvolvedor Backend</Text>
-      <Text>Java | Nodejs</Text>
+      <Text>Nodejs</Text>
       <HStack mt={2} spacing={2}>
         <Button
           size="sm"
