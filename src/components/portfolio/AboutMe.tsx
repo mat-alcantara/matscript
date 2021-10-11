@@ -25,11 +25,11 @@ export const AboutMe: React.FC = () => {
           >
             <Image
               float="right"
-              w="450px"
+              w={['', '', '768px', '450px']}
               src="./profile2.jpg"
               height="auto"
               borderRadius="4px"
-              ml={8}
+              ml={[0, 0, 0, 8]}
               mb={[4]}
             />
             Meu nome é Mateus Alcantara, eu tenho 24 anos e eu sou
