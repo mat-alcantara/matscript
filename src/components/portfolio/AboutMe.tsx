@@ -15,9 +15,14 @@ export const AboutMe: React.FC = () => {
         </Heading>
         <Divider ml={8} />
       </Flex>
-      <Flex mt={16} align="flex-start">
+      <Flex mt={[8, 8, 16]} align="flex-start">
         <VStack>
-          <Text float="left" textAlign="justify" maxW="980px">
+          <Text
+            float="left"
+            textAlign="justify"
+            maxW="980px"
+            fontSize={['12px', '14px', '']}
+          >
             <Image
               float="right"
               w="450px"
@@ -25,7 +30,7 @@ export const AboutMe: React.FC = () => {
               height="auto"
               borderRadius="4px"
               ml={8}
-              mb={4}
+              mb={[4]}
             />
             Meu nome é Mateus Alcantara, eu tenho 24 anos e eu sou
             Desenvolvedor. A minha paixão por programação começou em 2016,
