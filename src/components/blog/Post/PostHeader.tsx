@@ -24,10 +24,12 @@ import { PostProps } from '../../../pages/post/[slug]';
 export const PostHeader: React.FC<PostProps> = ({ post }) => {
   const { push } = Router;
   const showSocialMediaButtons = useBreakpointValue([false, false, true]);
+  const headingSize = useBreakpointValue(['md', 'md', 'lg', 'xl']);
+  const nameSize = useBreakpointValue(['sm', 'sm', 'md']);
 
   return (
     <Flex direction="column">
-      <Heading size="xl" mb={4}>
+      <Heading size={headingSize} mb={4}>
         {post.title}
       </Heading>
       <Flex justify="space-between" w="100%" align="flex-start">
@@ -40,16 +42,18 @@ export const PostHeader: React.FC<PostProps> = ({ post }) => {
           />
 
           <Flex direction="column">
-            <Heading size="md">Mateus Alcantara</Heading>
+            <Heading size={nameSize}>Mateus Alcantara</Heading>
 
-            <Stack direction={['column', 'column', 'row']} spacing={4} mt={2}>
+            <Stack direction="row" spacing={4} mt={2}>
               <HStack>
                 <Icon as={FaRegCalendar} />
-                <Text>{post.createdAt}</Text>
+                <Text fontSize={['12px', '']}>{post.createdAt}</Text>
               </HStack>
               <HStack>
                 <Icon as={FaRegClock} />
-                <Text>{`${post.estimateReadingTime} minutos de leitura`}</Text>
+                <Text
+                  fontSize={['12px', '']}
+                >{`${post.estimateReadingTime} minutos de leitura`}</Text>
               </HStack>
             </Stack>
           </Flex>

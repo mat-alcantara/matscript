@@ -28,10 +28,10 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <title>Mateus Alcantara</title>
       </Head>
       <Container>
-        <Flex direction="column" px={16} w="808px" mx="auto">
+        <Flex direction="column" w="680px" mx="auto">
           <PostHeader post={post} />
           <Box
-            fontSize={['16px', '18px', '21px']}
+            fontSize={['14px', '16px', '18px', '21px']}
             mt={4}
             className="postContent"
             w="100%"
