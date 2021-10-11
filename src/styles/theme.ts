@@ -26,7 +26,7 @@ export const theme = extendTheme({
         color: '#0C3048',
 
         // background: '#0D1117',
-        background: '#F8F8FF',
+        background: '#FFF',
       },
     },
   },
