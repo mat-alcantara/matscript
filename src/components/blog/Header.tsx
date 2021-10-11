@@ -1,8 +1,16 @@
-import { Flex, Heading, HStack, Text } from '@chakra-ui/react';
+import {
+  Flex,
+  Heading,
+  HStack,
+  Text,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 
 export const Header: React.FC = () => {
+  const logoSize = useBreakpointValue(['25px', '35px', '50px']);
+
   return (
     <Flex
       as="header"
@@ -12,8 +20,8 @@ export const Header: React.FC = () => {
       align="center"
       py={[2, 4, 8]}
     >
-      <HStack spacing={2} as="a" href="/">
-        <Image src="/logo.svg" width="50px" height="50px" />
+      <HStack spacing={2} as="a" href="/" align="center">
+        <Image src="/logo.svg" width={logoSize} height={logoSize} />
         <Heading size="lg" color="#5BA8F5" fontFamily="Roboto Mono">
           matscript
         </Heading>
@@ -25,6 +33,7 @@ export const Header: React.FC = () => {
         fontSize={['16px', '16px', '18px']}
         color="#0C3048"
         fontWeight="700"
+        mt={[2, 2, 0]}
       >
         <HStack as="a" href="/">
           <Text>Blog</Text>
