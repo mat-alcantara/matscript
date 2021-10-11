@@ -31,7 +31,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
         <title>Mateus Alcantara</title>
       </Head>
       <Container>
-        <Flex justify="space-between">
+        <Flex justify="space-between" w="100%">
           <PostMenu posts={posts} />
           <PersonalInfo />
         </Flex>

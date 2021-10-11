@@ -10,7 +10,7 @@ interface PostMenuProps {
 
 export const PostMenu: React.FC<PostMenuProps> = ({ posts }) => {
   return (
-    <VStack spacing={12} direction="column" maxW="65%" align="flex-start">
+    <VStack spacing={12} direction="column" w="65%" align="flex-start">
       {posts
         .sort((a, b) => {
           if (a.createdAt > b.createdAt) {
