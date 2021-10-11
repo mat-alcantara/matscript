@@ -24,7 +24,7 @@ import { PostProps } from '../../../pages/post/[slug]';
 export const PostHeader: React.FC<PostProps> = ({ post }) => {
   const { push } = Router;
   const showSocialMediaButtons = useBreakpointValue([false, false, true]);
-  const headingSize = useBreakpointValue(['md', 'md', 'lg', 'xl']);
+  const headingSize = useBreakpointValue(['md', 'lg', 'lg', 'xl']);
   const nameSize = useBreakpointValue(['sm', 'sm', 'md']);
 
   return (
