@@ -36,12 +36,12 @@ export const PostHeader: React.FC = () => {
             <HStack>
               <HStack spacing={4} mt={2}>
                 <HStack>
-                  <Icon fontSize=".8em" as={FaRegCalendar} />
-                  <Text fontSize=".8em">13 jun</Text>
+                  <Icon as={FaRegCalendar} />
+                  <Text>13 jun</Text>
                 </HStack>
                 <HStack>
-                  <Icon fontSize=".8em" as={FaRegClock} />
-                  <Text fontSize=".8em">2 minutos de leitura</Text>
+                  <Icon as={FaRegClock} />
+                  <Text>2 minutos de leitura</Text>
                 </HStack>
               </HStack>
             </HStack>
