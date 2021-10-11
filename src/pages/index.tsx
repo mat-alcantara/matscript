@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, useBreakpointValue } from '@chakra-ui/react';
 import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -25,6 +25,8 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ posts }) => {
+  const isScreenBig = useBreakpointValue([false, false, false, false, true]);
+
   return (
     <>
       <Head>
@@ -33,7 +35,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
       <Container>
         <Flex justify="space-between" w="100%">
           <PostMenu posts={posts} />
-          <PersonalInfo />
+          {isScreenBig && <PersonalInfo />}
         </Flex>
       </Container>
     </>

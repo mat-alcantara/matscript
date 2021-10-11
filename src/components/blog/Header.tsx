@@ -4,7 +4,14 @@ import React from 'react';
 
 export const Header: React.FC = () => {
   return (
-    <Flex as="header" justify="space-between" w="100%" align="center" py={8}>
+    <Flex
+      as="header"
+      direction={['column', 'column', 'row']}
+      justify="space-between"
+      w="100%"
+      align="center"
+      py={[2, 4, 8]}
+    >
       <HStack spacing={2} as="a" href="/">
         <Image src="/logo.svg" width="50px" height="50px" />
         <Heading size="lg" color="#5BA8F5" fontFamily="Roboto Mono">
@@ -15,7 +22,7 @@ export const Header: React.FC = () => {
       <HStack
         spacing={8}
         fontFamily="Roboto Mono"
-        fontSize="18px"
+        fontSize={['16px', '16px', '18px']}
         color="#0C3048"
         fontWeight="700"
       >
