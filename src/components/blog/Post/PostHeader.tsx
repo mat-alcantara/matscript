@@ -7,6 +7,7 @@ import {
   Image,
   Text,
 } from '@chakra-ui/react';
+import Router from 'next/router';
 import React from 'react';
 import {
   FaGithub,
@@ -19,6 +20,8 @@ import {
 import { PostProps } from '../../../pages/post/[slug]';
 
 export const PostHeader: React.FC<PostProps> = ({ post }) => {
+  const { push } = Router;
+
   return (
     <Flex direction="column">
       <Heading size="xl" mb={4}>
@@ -55,18 +58,21 @@ export const PostHeader: React.FC<PostProps> = ({ post }) => {
             aria-label="Github"
             icon={<FaGithub fontSize="30px" />}
             variant="ghost"
+            onClick={() => push('https://github.com/mat-alcantara')}
           />
           <IconButton
             colorScheme="blue"
             aria-label="Linkedin"
             icon={<FaLinkedin fontSize="30px" />}
             variant="ghost"
+            onClick={() => push('https://www.linkedin.com/in/mat-alcantara/')}
           />
           <IconButton
             colorScheme="purple"
             aria-label="Instagram"
             icon={<FaInstagram fontSize="30px" />}
             variant="ghost"
+            onClick={() => push('https://www.instagram.com/mat.alcantara/')}
           />
         </HStack>
       </Flex>
