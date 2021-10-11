@@ -31,6 +31,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <Flex direction="column" px={16} w="808px" mx="auto">
           <PostHeader post={post} />
           <Box
+            fontSize={['16px', '18px', '21px']}
             mt={4}
             className="postContent"
             w="100%"

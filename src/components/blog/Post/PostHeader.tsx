@@ -5,7 +5,9 @@ import {
   Icon,
   IconButton,
   Image,
+  Stack,
   Text,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import Router from 'next/router';
 import React from 'react';
@@ -21,6 +23,7 @@ import { PostProps } from '../../../pages/post/[slug]';
 
 export const PostHeader: React.FC<PostProps> = ({ post }) => {
   const { push } = Router;
+  const showSocialMediaButtons = useBreakpointValue([false, false, true]);
 
   return (
     <Flex direction="column">
@@ -38,43 +41,44 @@ export const PostHeader: React.FC<PostProps> = ({ post }) => {
 
           <Flex direction="column">
             <Heading size="md">Mateus Alcantara</Heading>
-            <HStack>
-              <HStack spacing={4} mt={2}>
-                <HStack>
-                  <Icon as={FaRegCalendar} />
-                  <Text>{post.createdAt}</Text>
-                </HStack>
-                <HStack>
-                  <Icon as={FaRegClock} />
-                  <Text>{`${post.estimateReadingTime} minutos de leitura`}</Text>
-                </HStack>
+
+            <Stack direction={['column', 'column', 'row']} spacing={4} mt={2}>
+              <HStack>
+                <Icon as={FaRegCalendar} />
+                <Text>{post.createdAt}</Text>
               </HStack>
-            </HStack>
+              <HStack>
+                <Icon as={FaRegClock} />
+                <Text>{`${post.estimateReadingTime} minutos de leitura`}</Text>
+              </HStack>
+            </Stack>
           </Flex>
         </HStack>
-        <HStack spacing={4} align="center">
-          <IconButton
-            colorScheme="blackAlpha"
-            aria-label="Github"
-            icon={<FaGithub fontSize="30px" />}
-            variant="ghost"
-            onClick={() => push('https://github.com/mat-alcantara')}
-          />
-          <IconButton
-            colorScheme="blue"
-            aria-label="Linkedin"
-            icon={<FaLinkedin fontSize="30px" />}
-            variant="ghost"
-            onClick={() => push('https://www.linkedin.com/in/mat-alcantara/')}
-          />
-          <IconButton
-            colorScheme="purple"
-            aria-label="Instagram"
-            icon={<FaInstagram fontSize="30px" />}
-            variant="ghost"
-            onClick={() => push('https://www.instagram.com/mat.alcantara/')}
-          />
-        </HStack>
+        {showSocialMediaButtons && (
+          <HStack spacing={4} align="center">
+            <IconButton
+              colorScheme="blackAlpha"
+              aria-label="Github"
+              icon={<FaGithub fontSize="30px" />}
+              variant="ghost"
+              onClick={() => push('https://github.com/mat-alcantara')}
+            />
+            <IconButton
+              colorScheme="blue"
+              aria-label="Linkedin"
+              icon={<FaLinkedin fontSize="30px" />}
+              variant="ghost"
+              onClick={() => push('https://www.linkedin.com/in/mat-alcantara/')}
+            />
+            <IconButton
+              colorScheme="purple"
+              aria-label="Instagram"
+              icon={<FaInstagram fontSize="30px" />}
+              variant="ghost"
+              onClick={() => push('https://www.instagram.com/mat.alcantara/')}
+            />
+          </HStack>
+        )}
       </Flex>
     </Flex>
   );
