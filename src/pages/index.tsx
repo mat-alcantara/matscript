@@ -25,7 +25,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ posts }) => {
-  const isScreenBig = useBreakpointValue([false, false, false, false, true]);
+  const isScreenBig = useBreakpointValue([false, false, false, true]);
 
   return (
     <>

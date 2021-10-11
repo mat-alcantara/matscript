@@ -13,7 +13,7 @@ export const Container: React.FC = ({ children }) => {
       w="100%"
       maxW="980px"
       mx="auto"
-      px={[8, 8, 8, 8, 4]}
+      px={[8, 8, 16, 16, 4]}
     >
       <Flex direction="column">
         <Header />

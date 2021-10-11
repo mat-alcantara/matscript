@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   return (
     <Flex as="footer" justify="space-between" pb={8} pt={16} align="center">
       <Text>Copyright © Mateus Alcantara</Text>
-      <HStack spacing={2}>
+      <HStack spacing={[0, 2]}>
         <IconButton
           size="lg"
           aria-label="Github"

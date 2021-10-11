@@ -18,10 +18,14 @@ export const Header: React.FC = () => {
       justify="space-between"
       w="100%"
       align="center"
-      py={[2, 4, 8]}
+      py={[4, 4, 8]}
     >
       <HStack spacing={2} as="a" href="/" align="center">
-        <Image src="/logo.svg" width={logoSize} height={logoSize} />
+        <Image
+          src="/logo.svg"
+          width={logoSize || '50px'}
+          height={logoSize || '50px'}
+        />
         <Heading size="lg" color="#5BA8F5" fontFamily="Roboto Mono">
           matscript
         </Heading>
