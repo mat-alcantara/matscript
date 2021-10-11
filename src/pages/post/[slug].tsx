@@ -11,7 +11,7 @@ import { PostHeader } from '../../components/blog/Post/PostHeader';
 import { getPrismicClient } from '../../services/prismic';
 import { getEstimatedReadingTime } from '../../utils/getEstimateReadindTime';
 
-interface PostProps {
+export interface PostProps {
   post: {
     slug: string;
     title: string;
@@ -29,8 +29,9 @@ const Post: React.FC<PostProps> = ({ post }) => {
       </Head>
       <Container>
         <Flex direction="column" px={16} w="808px" mx="auto">
-          <PostHeader />
+          <PostHeader post={post} />
           <Box
+            mt={4}
             className="postContent"
             w="100%"
             dangerouslySetInnerHTML={{ __html: post.content }}

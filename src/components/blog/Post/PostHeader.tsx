@@ -16,11 +16,13 @@ import {
   FaRegClock,
 } from 'react-icons/fa';
 
-export const PostHeader: React.FC = () => {
+import { PostProps } from '../../../pages/post/[slug]';
+
+export const PostHeader: React.FC<PostProps> = ({ post }) => {
   return (
     <Flex direction="column">
-      <Heading size="2xl" mb={8}>
-        Como acordar as 5 da manha Como acordar
+      <Heading size="xl" mb={4}>
+        {post.title}
       </Heading>
       <Flex justify="space-between" w="100%" align="flex-start">
         <HStack spacing={4}>
@@ -37,11 +39,11 @@ export const PostHeader: React.FC = () => {
               <HStack spacing={4} mt={2}>
                 <HStack>
                   <Icon as={FaRegCalendar} />
-                  <Text>13 jun</Text>
+                  <Text>{post.createdAt}</Text>
                 </HStack>
                 <HStack>
                   <Icon as={FaRegClock} />
-                  <Text>2 minutos de leitura</Text>
+                  <Text>{`${post.estimateReadingTime} minutos de leitura`}</Text>
                 </HStack>
               </HStack>
             </HStack>
