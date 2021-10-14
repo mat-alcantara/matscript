@@ -18,7 +18,7 @@ export const PostMenu: React.FC<PostMenuProps> = ({ posts }) => {
     >
       {posts
         .sort((a, b) => {
-          if (a.createdAt > b.createdAt) {
+          if (a.createdAt < b.createdAt) {
             return 1;
           }
           return -1;
